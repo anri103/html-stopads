@@ -1,0 +1,2 @@
+# html-stopads
+StopADS
