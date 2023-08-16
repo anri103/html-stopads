@@ -455,32 +455,14 @@ textarea {
 
 .page-wrapper {
     position: relative;
-    overflow: hidden;
 }
 
 .main {
     min-height: 100vh;
-    padding: 100px 0;
 }
 
 .main > .section {
-    margin-bottom: 72px;
-}
-
-.main > .section:last-child {
-    margin-bottom: 0;
-}
-
-.top-right-el {
-    position: absolute;
-    top: -345px;
-    right: 0;
-}
-
-.bottom-left-el {
-    position: absolute;
-    bottom: -300px;
-    left: 0;
+    padding: 32px 0;
 }
 
 /*------------------------------------------------------------------
@@ -512,6 +494,19 @@ textarea {
 
 .section-hero {
     position: relative;
+    overflow: hidden;
+}
+
+.top-right-el {
+    position: absolute;
+    top: -345px;
+    right: 0;
+}
+
+.bottom-left-el {
+    position: absolute;
+    bottom: -300px;
+    left: 0;
 }
 
 /*//////////////////////////////////////////////////////////////////
