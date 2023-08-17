@@ -368,28 +368,22 @@ textarea {
 /*//////////////////////////////////////////////////////////////////
 [ HEADER ]*/
 
-.header {
+.main-page .header {
     position: absolute;
-    top: 0;
+    top: 15px;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .main-header {
-    padding: 32px 53px;
+    padding: 20px;
     border-radius: 32px;
     background-color: #fff;
 }
 
-.header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .header-logo {
     display: inline-block;
-    width: 175px;
+    width: 128px;
 }
 
 .header-logo img {
@@ -397,34 +391,106 @@ textarea {
     height: auto;
 }
 
-.header-auth {}
+.header-auth {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    color: #293134;
+}
 
-.header-slogan {}
+.header-auth:hover {
+    color: #3CC;
+}
+
+.header-auth span {
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.auth-avatar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #EEEEF6;
+}
+
+.auth-avatar > * {
+    width: 21px;
+    height: 21px;
+}
+
+.header-slogan {
+    text-align: center;
+}
+
+.header-slogan span {
+    color: #293134;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 @media (min-width: 992px) {
 
+    .main-page .header {
+        top: 0;
+    }
+
+    .main-header {
+        padding: 32px 53px;
+    }
+
     .header-logo {
-        order: 1;
+        width: 175px;
     }
 
-    .header-auth {
-        order: 3;
+    .auth-avatar {
+        width: 51px;
+        height: 51px;
     }
 
-    .header-slogan {
-        order: 2;
+    .auth-avatar > * {
+        width: 31px;
+        height: 31px;
+    }
+
+    .header-slogan span {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .header-auth span {
+        display: none;
     }
 }
 
 /*//////////////////////////////////////////////////////////////////
 [ FOOTER ]*/
 
-.footer {
+.main-page .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 32px 0;
-    z-index: 9999;
+    padding: 32px 0 52px;
+    z-index: 999;
+}
+
+.styled-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(270deg, rgba(41, 49, 52, 0.00) 0%, #293134 51.56%, rgba(41, 49, 52, 0.00) 100%);
+    margin-bottom: 25px;
 }
 
 .widget-footer {
@@ -433,6 +499,28 @@ textarea {
 
 .widget-footer p {
     margin-bottom: 16px;
+}
+
+.widget-copyright p {
+    color: #293134;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.widget-policy a {
+    color: #293134;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.widget-policy a:hover {
+    color: #3CC;
 }
 
 /*------------------------------------------------------------------
@@ -495,18 +583,83 @@ textarea {
 .section-hero {
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .top-right-el {
     position: absolute;
     top: -345px;
     right: 0;
+    z-index: -1;
 }
 
 .bottom-left-el {
     position: absolute;
     bottom: -300px;
     left: 0;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 833px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-form {
+    position: relative;
+}
+
+.hero-form .form-control {
+    border-radius: 22px;
+    border: 2px solid #3CC;
+    background: #fff;
+    min-height: 60px;
+    padding: 16px 60px 16px 25px;
+    font-size: 20px;
+}
+
+.hero-form .btn {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    padding: 0;
+}
+
+.hero-buttons {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.hero-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: #293134;
+}
+
+.hero-button:hover {
+    color: #3CC;
+}
+
+.hero-button__img {
+    flex-shrink: 0;
+}
+
+.hero-button__title {
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
 }
 
 /*//////////////////////////////////////////////////////////////////
