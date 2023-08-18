@@ -18,3 +18,22 @@ maskDate.forEach(function (el) {
     });
 });
 
+//////////////////////////////////////////////////////////////////
+// [ Отложенная задержка модального окна ]
+
+window.addEventListener("load", function () {
+    var loginModalElement = document.getElementById('login_modal');
+    if (loginModalElement) {
+        setTimeout(function () {
+            var myModal = new bootstrap.Modal(loginModalElement);
+            myModal.show();
+        }, 5000); // Задержка в миллисекундах
+    }
+});
+
+//////////////////////////////////////////////////////////////////
+// [ Кнопка "Назад" ]
+
+function goBack() {
+    window.history.back();
+}
