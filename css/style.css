@@ -168,6 +168,11 @@ html {
     font-weight: 600;
 }
 
+.fw-bold,
+.fw-700 {
+    font-weight: 700;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ LINKS ]*/
 
@@ -610,11 +615,7 @@ textarea {
     position: relative;
 }
 
-.main {
-    min-height: 100vh;
-}
-
-.main > .section {
+.section {
     padding: 32px 0;
 }
 
@@ -778,8 +779,6 @@ textarea {
     margin-bottom: 0;
 }
 
-.login-form .form-check {}
-
 .login-form__buttons {
     display: flex;
     justify-content: center;
@@ -796,6 +795,20 @@ textarea {
     font-weight: 400;
     line-height: 113.6%;
     margin-top: 34px;
+}
+
+/*------------------------------------------------------------------
+[ section-registration ]*/
+
+.section-registration {
+    padding-bottom: 148px;
+}
+
+/*------------------------------------------------------------------
+[ section-registration-thanks ]*/
+
+.section-registration-thanks {
+    height: 100vh;
 }
 
 /*//////////////////////////////////////////////////////////////////
