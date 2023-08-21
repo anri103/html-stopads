@@ -551,8 +551,11 @@ textarea {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 32px 0 52px;
     z-index: 999;
+}
+
+.footer {
+    padding: 32px 0 52px;
 }
 
 .styled-line {
@@ -613,15 +616,50 @@ textarea {
 
 .page-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .section {
     padding: 32px 0;
 }
 
-.section-title {
+.section-header {
     text-align: center;
     margin-bottom: 54px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+@media (min-width: 992px) {
+
+    .section-title {
+        font-size: 30px;
+    }
+    
+    .section-subtitle {
+        font-size: 24px;
+    }
 }
 
 /*------------------------------------------------------------------
@@ -631,7 +669,7 @@ textarea {
     --bs-card-spacer-y: 1rem;
     --bs-card-spacer-x: 1rem;
     --bs-card-title-spacer-y: 0.5rem;
-    --bs-card-border-width: 1px;
+    --bs-card-border-width: 0;
     --bs-card-border-color: transparent;
     --bs-card-border-radius: 0;
     --bs-card-box-shadow: ;
@@ -652,9 +690,9 @@ textarea {
 [ section-hero ]*/
 
 .section-hero {
+    flex: 1 1 auto;
     position: relative;
     overflow: hidden;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -808,7 +846,231 @@ textarea {
 [ section-registration-thanks ]*/
 
 .section-registration-thanks {
-    height: 100vh;
+    position: relative;
+}
+
+/*------------------------------------------------------------------
+[ section-password-recovery ]*/
+
+.section-password-recovery {
+    padding-bottom: 260px;
+}
+
+.section-password-recovery .container-small {
+    max-width: 400px;
+}
+
+.section-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    color: #3080E3;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #EEEEF7;
+}
+
+.step-title {
+    color: #293134;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 113.6%;
+}
+
+/*------------------------------------------------------------------
+[ section-about ]*/
+
+.section-about .container-small {
+    max-width: 940px;
+}
+
+/*------------------------------------------------------------------
+[ section-features ]*/
+
+.section-features {
+    padding-bottom: 94px;
+}
+
+.features-grid {
+    --features-card-gap: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--features-card-gap);
+}
+
+.features-card {
+    --bs-card-spacer-y: 24px;
+    --bs-card-spacer-x: 0;
+    --bs-card-border-radius: 12px;
+    width: calc(25% - var(--features-card-gap));
+    padding: 30px 20px;
+}
+
+.features-card .card-body {
+    text-align: center;
+}
+
+.features-card .card-title {
+    color: #293134;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 6px;
+}
+
+.features-card .card-subtitle {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.features-img {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto;
+}
+
+/*------------------------------------------------------------------
+[ section-download-pc ]*/
+
+.download-pc-tabs .tab-navigation {
+    margin-bottom: 42px;
+}
+
+.download-pc-tabs .nav {
+    --bs-nav-link-color: var(--bs-body-color);
+    --bs-nav-link-hover-color: var(--bs-link-hover-color);
+    --bs-nav-link-disabled-color: var(--bs-secondary-color);
+    justify-content: center;
+    gap: 30px;
+}
+
+.download-pc-tabs .nav-pills {
+    --bs-nav-pills-border-radius: 12px;
+    --bs-nav-pills-link-active-color: #293134;
+    --bs-nav-pills-link-active-bg: #fff;
+}
+
+.download-tab-img {
+    margin-bottom: 34px;
+}
+
+.download-tab-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+}
+
+.download-tab-list li {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+@media (min-width: 992px) {
+
+    .download-pc-tabs .nav {
+        gap: 60px;
+    }
+
+    .download-tab-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-download-mobile ]*/
+
+.section-download-mobile {
+    margin-bottom: 94px;
+}
+
+.download-card {
+    --download-card-padding: 30px;
+    padding: var(--download-card-padding);
+    border-radius: 30px;
+    background: #FFF;
+}
+
+.download-card-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(-1 * var(--download-card-padding));
+}
+
+.download-card .section-header,
+.download-card .section-text {
+    text-align: center;
+}
+
+.download-card .section-header {
+    margin-bottom: 12px;
+}
+
+.download-card .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 54px;
+}
+
+.download-card .section-text {
+    max-width: 580px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 257px;
+    height: 82px;
+    border-radius: 22px;
+    background: #293134;
+}
+
+.btn-download:hover {
+    opacity: 0.75;
+}
+
+@media (min-width: 992px) {
+
+    .download-card {
+        --download-card-padding: 60px;
+    }
+
+    .download-card .section-header,
+    .download-card .section-text {
+        text-align: left;
+    }
+
+    .download-card .section-content {
+        gap: 94px;
+    }
+
+    .download-card .section-text {
+        font-size: 24px;
+    }
+
+    .download-card .section-header {
+        margin-top: 45px;
+        margin-bottom: 14px;
+    }
+
+    .download-card .section-content {
+        align-items: flex-start;
+    }
 }
 
 /*//////////////////////////////////////////////////////////////////
