@@ -28,21 +28,15 @@
                         <div class="col-6 col-lg-3 order-lg-1">
                             <div class="header-logo">
                                 <a href="index.html" class="hover-opacity">
-                                    <img src="img/logo.svg" alt="mesee.ru" />
+                                    <img src="img/logo.svg" alt="logo" />
                                 </a>
                             </div>
                         </div>
                         <div class="col-6 col-lg-3 order-lg-3">
                             <div class="d-flex justify-content-end">
-                                <a href="#" class="header-auth">
+                                <a href="lk-account.html" class="header-auth">
                                     <div class="auth-avatar">
-                                        <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="11.5" cy="6.7347" r="3.64706" stroke="#3080E3"
-                                                stroke-width="2" />
-                                            <path
-                                                d="M14.2354 13.1169H8.76478C6.24701 13.1169 3.99177 15.4418 5.64881 17.3374C6.77566 18.6265 8.63914 19.4993 11.5001 19.4993C14.361 19.4993 16.2245 18.6265 17.3513 17.3374C19.0084 15.4418 16.7531 13.1169 14.2354 13.1169Z"
-                                                stroke="#3080E3" stroke-width="2" />
-                                        </svg>
+                                        <img src="img/account-avatar.png" alt="">
                                     </div>
                                     <span>Личный кабинет</span>
                                 </a>
@@ -80,16 +74,18 @@
                         <!-- Sidebar -->
                         <div class="col-lg-4">
                             <div class="account-card">
-                                <div class="account-avatar">
-                                    <a href="#!">
-                                        <img class="avatar-img" src="img/account-avatar.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="account-name">
-                                    <span>Имя Фамилия</span>
-                                </div>
-                                <div class="account-email">
-                                    <span>admin@mail.ru</span>
+                                <div class="account-card-header">
+                                    <div class="account-avatar">
+                                        <a href="#!">
+                                            <img class="avatar-img" src="img/account-avatar.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="account-name">
+                                        <span>Имя Фамилия</span>
+                                    </div>
+                                    <div class="account-email">
+                                        <span>admin@mail.ru</span>
+                                    </div>
                                 </div>
                                 <div class="account-menu">
                                     <nav class="nav nav-pills flex-column">
@@ -128,58 +124,96 @@
 
                         <!-- Content -->
                         <div class="col-lg-8">
-                            <form class="account-form" action="#" id="accountForm">
-                                <div class="row gy-5">
-                                    <div class="col-lg-6">
-                                        <div class="form-field">
-                                            <label class="form-label">Имя*</label>
-                                            <input type="text" class="form-control" id="registrationName" required>
-                                        </div>
+                            <div class="account-widgets-wrap">
+                                <!-- Widget -->
+                                <div class="account-alert-info">
+                                    <div class="alert-info-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39" fill="none">
+                                            <circle cx="20" cy="19.5" r="19.5" fill="#EEEEF7"/>
+                                            <path d="M20.5 25L20.5 18.7143M20.5 14L20.4825 14" stroke="#3080E3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-field">
-                                            <label class="form-label">Фамилия</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-field">
-                                            <label class="form-label">Почта*</label>
-                                            <input type="email" class="form-control" id="registrationEmail" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-field">
-                                            <label class="form-label">Пароль*</label>
-                                            <input type="password" class="form-control" id="registrationPass" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <p>* обязательные поля для заполнения</p>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-checkbox">
-                                            <input class="form-check-input" type="checkbox" value="" id="registrationChecked" checked="">
-                                            <label class="form-check-label" for="registrationChecked">
-                                                Я согласен с <a href="#">Условиями</a> и <a href="#">Политикой конфиденциальности</a>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <button type="submit" class="btn btn-primary w-100 disabled" id="registrationSubmitBtn">Зарегистрироваться</button>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="d-flex gap-3 justify-content-center">
-                                            <div>
-                                                <span>Уже есть аккаунт в stopADS?</span>
-                                            </div>
-                                            <div>
-                                                <a href="#" class="fw-700">Войти</a>
-                                            </div>
-                                        </div>
+                                    <div class="alert-info-text">
+                                        <span>Ваш тариф - Базовый. <a href="#">Сменить тарифный план.</a></span>
                                     </div>
                                 </div>
-                            </form>
+                                <!-- Widget -->
+                                <div class="account-widget">
+                                    <div class="section-header">
+                                        <h1 class="section-title">Детали учетной записи</h1>
+                                    </div>
+                                    <form class="account-form" action="#" id="accountForm">
+                                        <div class="row gy-5">
+                                            <div class="col-lg-6">
+                                                <div class="form-field">
+                                                    <label class="form-label">Имя*</label>
+                                                    <input type="text" class="form-control" id="registrationName" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-field">
+                                                    <label class="form-label">Фамилия</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-field">
+                                                    <label class="form-label">Почта*</label>
+                                                    <input type="email" class="form-control" id="registrationEmail" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-field">
+                                                    <label class="form-label">Пароль*</label>
+                                                    <input type="password" class="form-control" id="registrationPass" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <p>* обязательные поля для заполнения</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-checkbox">
+                                                    <input class="form-check-input" type="checkbox" value="" id="registrationChecked" checked="">
+                                                    <label class="form-check-label" for="registrationChecked">
+                                                        Я согласен с <a href="#">Условиями</a> и <a href="#">Политикой конфиденциальности</a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-field">
+                                                    <label class="form-label">Заметки</label>
+                                                    <textarea class="form-control" rows="6"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <button type="submit" class="btn btn-primary disabled" id="registrationSubmitBtn">Сохранить изменения</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Widget -->
+                                <div class="account-widget">
+                                    <div class="section-header">
+                                        <p class="section-title">Удалить аккаунт</p>
+                                        <p>Когда вы удаляете свою учетную запись, ваш общедоступный профиль будет немедленно деактивирован. Если вы передумаете до истечения 14 дней, войдите в систему, используя свой адрес электронной почты и пароль, и мы вышлем вам ссылку для повторной активации вашей учетной записи.</p>
+                                    </div>
+                                    <form class="delete-form" action="#" id="deleteForm">
+                                        <div class="row gy-5">
+                                            <div class="col-lg-12">
+                                                <div class="form-checkbox">
+                                                    <input class="form-check-input" type="checkbox" value="" id="deleteChecked">
+                                                    <label class="form-check-label" for="deleteChecked">
+                                                        Да, я хочу удалить свой аккаунт.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <button type="submit" class="btn btn-primary disabled" id="deleteSubmitBtn">Удалить</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
