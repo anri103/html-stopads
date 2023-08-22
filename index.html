@@ -120,7 +120,7 @@
                 </div>
                 <div class="hero-content">
                     <div class="container-small">
-                        <form class="hero-form">
+                        <form class="form hero-form">
                             <input class="form-control" type="text" placeholder="вставь адрес сайта">
                             <button type="submit" class="btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
@@ -205,13 +205,13 @@
     <!-- Modals -->
     <!-- ////// -->
 
-    <!-- Авторизация -->
-    <div class="modal login-modal fade" id="login_modal" tabindex="-1" aria-labelledby="Авторизация" aria-hidden="true">
+    <!-- Авторизация Автоматическая -->
+    <div class="modal login-modal fade" id="login_modal" tabindex="-1" aria-labelledby="Авторизация Автоматическая" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
+                <!-- <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+                </div> -->
                 <div class="modal-body">
                     <h3 class="modal-title">Простите, что прервали вас</h3>
                     <div class="modal-info">
@@ -225,26 +225,26 @@
                             <p>Для продолжения работы в браузере без рекламы, войдите в личный кабинет или зарегистрируйтесь. <a href="registration-01.html">Регистрация бесплатная.</a></p>
                         </div>
                     </div>
-                    <form class="login-form" action="#">
+                    <form class="form login-form" action="lk-account.html">
                         <div class="form-fields-container">
                             <div class="form-field">
-                                <label class="form-label">Почта*</label>
+                                <label class="form-label">Почта</label>
                                 <input type="email" class="form-control">
                             </div>
                             <div class="form-field">
-                                <label class="form-label">Пароль*</label>
+                                <label class="form-label">Пароль</label>
                                 <input type="password" class="form-control">
                             </div>
                         </div>
                         <div class="form-checkbox">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" id="loginRememberCheckbox">
+                            <label class="form-check-label" for="loginRememberCheckbox">
                                 Запомнить логин и пароль
                             </label>
                         </div>
                         <div class="login-form__buttons">
                             <button type="submit" class="btn btn-primary btn-lg">войти</button>
-                            <a href="password-recovery-01.html" class="btn btn-link">Забыли свой пароль?</a>
+                            <a href="password-recovery-01.html" class="btn btn-link p-0">Забыли свой пароль?</a>
                         </div>
                     </form>
                     <div class="modal-explanation">

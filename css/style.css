@@ -221,8 +221,7 @@ textarea {
 }
 
 .form-label {
-    font-family: Manrope;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 134.1%;
@@ -235,22 +234,24 @@ textarea {
 }
 
 .form-check-input {
+    --bs-form-check-bg: #fff;
     width: 1.5em;
     height: 1.5em;
     margin-top: 0;
+    flex-shrink: 0;
 }
 
 .form-check-input:checked {
-    background-color: #3080E3;
-    border-color: #3080E3;
+    background-color: #EEEEF7;
+    border-color: #EEEEF7;
+}
+
+.form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.6585 5.27649C20.0742 5.64017 20.1163 6.27193 19.7526 6.68757L11.0026 16.6876C10.6403 17.1017 10.0114 17.1452 9.59546 16.7851L4.34546 12.2396C3.92792 11.8781 3.8825 11.2466 4.244 10.8291C4.6055 10.4115 5.23704 10.3661 5.65457 10.7276L10.1525 14.6219L18.2474 5.37056C18.6111 4.95493 19.2429 4.91281 19.6585 5.27649Z' fill='%23172755'/%3E%3C/svg%3E");
 }
 
 .form-check-input[type=checkbox] {
     border-radius: 8px;
-}
-
-.form-check-input:checked[type=checkbox] {
-    filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 .form-check-input:focus {
@@ -260,11 +261,25 @@ textarea {
 
 .form-check-label {
     color: #8794BA;
-    font-family: Manrope;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.form .btn-primary {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+
+    .form-label {
+        font-size: 20px;
+    }
+
+    .form .btn-primary {
+        width: auto;
+    }
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -331,25 +346,13 @@ textarea {
 
 .hover-shine:hover {
     opacity: 1;
-    -webkit-animation: flash .8s;
     animation: flash .8s;
-}
-
-@-webkit-keyframes flash {
-    0% {
-        opacity: .65;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 @keyframes flash {
     0% {
         opacity: .65;
     }
-
     100% {
         opacity: 1;
     }
@@ -365,33 +368,16 @@ textarea {
 }
 
 .img-floating {
-    -webkit-animation: floating 5s ease-in-out infinite;
     animation: floating 5s ease-in-out infinite;
-}
-
-@-webkit-keyframes floating {
-    0% {
-        transform: translate(0, 0px);
-    }
-
-    50% {
-        transform: translate(0, 8px);
-    }
-
-    100% {
-        transform: translate(0, 0px);
-    }
 }
 
 @keyframes floating {
     0% {
         transform: translate(0, 0px);
     }
-
     50% {
         transform: translate(0, 8px);
     }
-
     100% {
         transform: translate(0, 0px);
     }
@@ -472,7 +458,6 @@ textarea {
 }
 
 .header-auth span {
-    font-family: Manrope;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -501,7 +486,6 @@ textarea {
 
 .header-slogan span {
     color: #293134;
-    font-family: Manrope;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -570,7 +554,6 @@ textarea {
 
 .widget-copyright p {
     color: #293134;
-    font-family: Manrope;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -579,7 +562,6 @@ textarea {
 
 .widget-policy a {
     color: #293134;
-    font-family: Manrope;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -698,6 +680,7 @@ textarea {
     top: -345px;
     right: 0;
     z-index: -1;
+    animation: hero-floating 6s infinite linear;
 }
 
 .bottom-left-el {
@@ -705,6 +688,7 @@ textarea {
     bottom: -300px;
     left: 0;
     z-index: -1;
+    animation: hero-floating 6s infinite linear;
 }
 
 .hero-form {
@@ -752,12 +736,20 @@ textarea {
 }
 
 .hero-button__title {
-    font-family: Manrope;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+}
+
+@keyframes hero-floating {
+    0% {
+        transform: rotate(0deg) translate(100px) rotate(0deg);
+      }
+    100% {
+        transform: rotate(360deg) translate(100px) rotate(-360deg);
+    }
 }
 
 /*------------------------------------------------------------------
@@ -773,61 +765,82 @@ textarea {
 }
 
 .login-modal .modal-body {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding: 32px 24px;
 }
 
 .login-modal .modal-title {
     color: #293134;
-    font-family: Manrope;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 109%;
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 36px;
 }
 
 .login-modal .modal-info {
     display: flex;
-    gap: 21px;
-    padding: 0 10px;
-    font-family: Manrope;
-    font-size: 18px;
+    gap: 8px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 113%;
-    margin-bottom: 41px;
+    margin-bottom: 24px;
 }
 
 .login-form .form-fields-container {
-    margin-bottom: 14px;
-}
-
-.login-form .form-field {
-    margin-bottom: 44px;
-}
-
-.login-form .form-field:last-child {
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
 }
 
 .login-form__buttons {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 34px;
     margin-top: 44px;
 }
 
 .modal-explanation {
     text-align: center;
     color: #000;
-    font-family: Manrope;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 113.6%;
     margin-top: 34px;
+}
+
+@media (min-width: 992px) {
+
+    .login-modal .modal-body {
+        padding: 54px 70px;
+    }
+
+    .login-modal .modal-title {
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
+
+    .login-modal .modal-info {
+        padding: 0 10px;
+        gap: 21px;
+        font-size: 18px;
+        margin-bottom: 41px;
+    }
+
+    .login-form .form-fields-container {
+        gap: 44px;
+        margin-bottom: 14px;
+    }
+
+    .login-form__buttons {
+        flex-direction: row;
+        gap: 24px;
+    }
 }
 
 /*------------------------------------------------------------------
@@ -899,10 +912,11 @@ textarea {
 }
 
 .features-card {
+    --features-card-width: 100%;
     --bs-card-spacer-y: 24px;
     --bs-card-spacer-x: 0;
     --bs-card-border-radius: 12px;
-    width: calc(25% - var(--features-card-gap));
+    width: calc(var(--features-card-width) - var(--features-card-gap));
     padding: 30px 20px;
 }
 
@@ -915,8 +929,8 @@ textarea {
     font-size: 26px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    margin-bottom: 6px;
+    line-height: 110%;
+    margin-bottom: 12px;
 }
 
 .features-card .card-subtitle {
@@ -926,10 +940,60 @@ textarea {
     line-height: normal;
 }
 
+.features-card .card-icon-container {
+    position: relative;
+    margin: 0 auto;
+    width: 78px;
+    height: 78px;
+}
+
 .features-img {
     width: 78px;
     height: 78px;
-    margin: 0 auto;
+}
+
+.static-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+  
+.animated-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.features-card:hover .static-img {
+    opacity: 0;
+}
+  
+.features-card:hover .animated-img {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+
+    .features-card {
+        --features-card-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .features-card {
+        --features-card-width: 33%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .features-card {
+        --features-card-width: 25%;
+    }
 }
 
 /*------------------------------------------------------------------
@@ -985,11 +1049,52 @@ textarea {
 [ section-download-mobile ]*/
 
 .section-download-mobile {
-    margin-bottom: 94px;
+    padding-bottom: 94px;
+}
+
+.animated-el-big {
+    position: absolute;
+    bottom: -245px;
+    left: 0;
+    z-index: 0;
+    animation: hero-floating 6s infinite linear;
+    width: 692px;
+    height: 692px;
+    border-radius: 50%;
+    background: radial-gradient(67.92% 67.92% at 50.00% 40.46%, rgba(91, 208, 230, 0.51) 11.91%, rgba(91, 208, 230, 0.00) 100%);
+    filter: blur(33px);
+}
+
+.animated-el-small {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: 0;
+    animation: hero-floating 6s infinite linear;
+    width: 293px;
+    height: 297px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(51, 204, 204, 0.44) 0%, rgba(51, 204, 204, 0.00) 100%);
+    filter: blur(64.5px);
+}
+
+.animated-el-smaller {
+    position: absolute;
+    bottom: 0;
+    left: 340px;
+    z-index: 0;
+    animation: hero-floating 6s infinite linear;
+    width: 293px;
+    height: 297px;
+    border-radius: 50%;
+    background: radial-gradient(53.15% 53.15% at 50.00% 35.87%, rgba(51, 204, 204, 0.44) 0%, rgba(51, 204, 204, 0.00) 100%);
+    filter: blur(64.5px);
 }
 
 .download-card {
     --download-card-padding: 30px;
+    position: relative;
+    overflow: hidden;
     padding: var(--download-card-padding);
     border-radius: 30px;
     background: #FFF;
@@ -1074,7 +1179,7 @@ textarea {
 .account-card {
     display: flex;
     flex-direction: column;
-    padding: 40px 30px;
+    padding: 30px 15px;
     border-radius: 32px;
     background: #FFF;
 }
@@ -1117,6 +1222,16 @@ textarea {
     line-height: normal;
 }
 
+.account-menu .btn-collapse .dropdown-icon {
+    display: inline-block;
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+}
+
+.account-menu .btn-collapse.collapsed .dropdown-icon {
+    transform: rotate(0deg);
+}
+
 .account-menu .nav {
     --bs-nav-link-color: var(--bs-body-color);
     --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -1134,7 +1249,8 @@ textarea {
 }
 
 .account-menu .nav-link {
-    font-size: 24px;
+    display: flex;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1165,6 +1281,25 @@ textarea {
 .section-account .section-header {
     text-align: left;
     margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+
+    .account-card {
+        padding: 40px 30px;
+    }
+
+    .account-menu .btn-collapse {
+        display: none;
+    }
+
+    .account-menu .collapse {
+        display: block;
+    }
+
+    .account-menu .nav-link {
+        font-size: 24px;
+    }
 }
 
 /*//////////////////////////////////////////////////////////////////

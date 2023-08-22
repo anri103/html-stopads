@@ -39,29 +39,20 @@ function goBack() {
 }
 
 //////////////////////////////////////////////////////////////////
-// [ Валидация формы регистрации ]
+// [ Валидация всех форм ]
 
-// Получаем ссылки на поля формы и кнопку отправки
-var registrationForm = document.getElementById('registrationForm');
-var registrationName = document.getElementById('registrationName');
-var registrationEmail = document.getElementById('registrationEmail');
-var registrationPass = document.getElementById('registrationPass');
-var registrationSubmitBtn = document.getElementById('registrationSubmitBtn');
+document.addEventListener("DOMContentLoaded", function () {
+    var forms = document.querySelectorAll(".needs-validation");
 
-// Функция для проверки, заполнены ли обязательные поля формы
-function checkForm() {
-    if (registrationForm) {
-        if (registrationName.checkValidity() && registrationEmail.checkValidity() && registrationPass.checkValidity()) {
-            registrationSubmitBtn.classList.remove('disabled');
-        } else {
-            registrationSubmitBtn.classList.add('disabled');
-        }
-    } else {
-        registrationSubmitBtn.classList.add('disabled');
-    }
-}
+    forms.forEach(function (form) {
+        var submitButton = form.querySelector("button[type='submit']");
 
-// Слушаем событие ввода в поля формы
-registrationName.addEventListener('input', checkForm);
-registrationEmail.addEventListener('input', checkForm);
-registrationPass.addEventListener('input', checkForm);
+        form.addEventListener("input", function () {
+            if (form.checkValidity()) {
+                submitButton.classList.remove("disabled");
+            } else {
+                submitButton.classList.add("disabled");
+            }
+        });
+    });
+});
