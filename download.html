@@ -152,9 +152,78 @@
                         <div class="animated-el-big"></div>
                         <div class="animated-el-small"></div>
                         <div class="animated-el-smaller"></div>
+                        <!-- Masthead device mockup feature-->
+                        <style>
+                            .masthead-device-mockup {
+                                position: absolute;
+                                top: auto;
+                                left: 0;
+                            }
+                            .device-wrapper {
+                                position: relative;
+                                border-radius: 20px;
+                                overflow: hidden;
+                            }
+                            .device-wrapper video {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 95%;
+                                height: auto;
+                                object-fit: cover;
+                            }
+                            .device-wrapper .device-img {
+                                position: relative;
+                            }
+                            @media (min-width: 578px) {
+                                .masthead-device-mockup {
+                                    top: auto;
+                                    left: 0;
+                                }
+                            }
+                            @media (min-width: 768px) {
+                                .masthead-device-mockup {
+                                    top: auto;
+                                    left: 0;
+                                }
+                            }
+                            @media (min-width: 992px) {
+                                .masthead-device-mockup {
+                                    top: auto;
+                                    left: 0;
+                                }
+                            }
+                            @media (min-width: 1200px) {
+                                .masthead-device-mockup {
+                                    top: 65px;
+                                    left: 30px;
+                                }
+                            }
+                            @media (min-width: 1400px) {
+                                .masthead-device-mockup {
+                                    top: 65px;
+                                    left: 65px;
+                                }
+                            }
+                            @media (min-width: 1600px) {
+                                .masthead-device-mockup {
+                                    top: 65px;
+                                    left: 130px;
+                                }
+                            }
+                        </style>
+                        <div class="masthead-device-mockup">
+                            <div class="device-wrapper">
+                                <video muted="muted" autoplay="" loop="">
+                                    <source src="img/IMG_5250.MP4" type="video/mp4">
+                                </video>
+                                <img class="device-img img-fluid" src="img/portrait_black.png" alt="device">
+                            </div>
+                        </div>
                         <div class="position-relative">
-                            <div class="row gy-5">
-                                <div class="col-lg-7 order-lg-2">
+                            <div class="row justify-content-end">
+                                <div class="col-xl-7">
                                     <div class="section-header">
                                         <h2 class="section-title">Скачайте stopADS для мобильного устройства</h2>
                                     </div>
@@ -211,13 +280,6 @@
                                                 </defs>
                                             </svg>
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 order-lg-1">
-                                    <div class="d-flex align-items-end justify-content-center h-100">
-                                        <div class="download-card-img">
-                                            <img class="img-fluid" src="img/mockup-mobile.png" alt="">
-                                        </div>
                                     </div>
                                 </div>
                             </div>
