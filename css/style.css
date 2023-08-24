@@ -1101,11 +1101,26 @@ textarea {
     min-height: 1036px;
 }
 
-/* .download-card-img {
-    display: flex;
-    justify-content: center;
-    margin-bottom: calc(-1 * var(--download-card-padding));
-} */
+.masthead-device-mockup {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    bottom: -305px;
+    transform: translateX(-50%);
+    width: 280px;
+}
+.device-wrapper video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+}
+.device-wrapper .device-img {
+    position: relative;
+}
 
 .download-card .section-header,
 .download-card .section-text {
@@ -1145,35 +1160,27 @@ textarea {
     opacity: 0.75;
 }
 
-/* @media (min-width: 992px) {
+@media (min-width: 375px) {
 
-    .download-card {
-        --download-card-padding: 60px;
-        min-height: 742px;
+    .masthead-device-mockup {
+        width: 330px;
     }
+}
 
-    .download-card .section-header,
-    .download-card .section-text {
-        text-align: left;
-    }
+@media (min-width: 425px) {
 
-    .download-card .section-content {
-        gap: 94px;
+    .masthead-device-mockup {
+        width: 370px;
     }
+}
 
-    .download-card .section-text {
-        font-size: 24px;
-    }
+@media (min-width: 768px) {
 
-    .download-card .section-header {
-        margin-top: 45px;
-        margin-bottom: 14px;
+    .masthead-device-mockup {
+        width: 430px;
+        bottom: -345px;
     }
-
-    .download-card .section-content {
-        align-items: flex-start;
-    }
-} */
+}
 
 @media (min-width: 1200px) {
 
@@ -1203,7 +1210,31 @@ textarea {
     .download-card .section-content {
         align-items: flex-start;
     }
-    
+
+    .masthead-device-mockup {
+        top: 65px;
+        left: 30px;
+        bottom: auto;
+        transform: none;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .masthead-device-mockup {
+        top: 65px;
+        left: 65px;
+        bottom: auto;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .masthead-device-mockup {
+        top: 65px;
+        left: 130px;
+        bottom: auto;
+    }
 }
 
 /*------------------------------------------------------------------
